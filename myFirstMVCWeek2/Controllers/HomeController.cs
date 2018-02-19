@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using MyHowestWeek2;
+
 
 namespace myFirstMVCWeek2.Controllers
 {
@@ -19,6 +21,17 @@ namespace myFirstMVCWeek2.Controllers
         public ViewResult Index()
         {
             ViewBag.Groenten = groenten;
+            return View();
+        }
+
+        public ViewResult Student()
+        {
+            List<Student> studenten = new List<Student>
+            {
+                new Student { Id = 1, Naam = "Matthias", AfstudeerGraad = Graad.voldoening},
+                new Student {Id = 2, Naam = "doggo", AfstudeerGraad = Graad.onderscheiding}
+            };
+            ViewBag.studenten = studenten;
             return View();
         }
     }

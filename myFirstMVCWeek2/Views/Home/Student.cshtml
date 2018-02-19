@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+    @using MyHowestWeek2;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Student</title>
+</head>
+<body>
+    <h1>studenten</h1>
+    <ul>
+        @foreach (Student student in ViewBag.studenten)
+        {
+            <li>@student.ToString()</li>
+        }
+    </ul>
+</body>
+</html>
