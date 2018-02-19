@@ -8,9 +8,18 @@ namespace myFirstMVCWeek2.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index(string word)
+        private string[] groenten = {"rode kool","spruit", "wortel","spinazie"};
+
+        /*public string Index(string word)
         {
+            ViewBag.Groet = "hi";
             return $"cute {word}";
+        }*/
+
+        public ViewResult Index()
+        {
+            ViewBag.Groenten = groenten;
+            return View();
         }
     }
 }
